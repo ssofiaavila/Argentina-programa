@@ -11,7 +11,7 @@ public class ejercicio1 {
 		Connection conexion = null;
 		String jdbc= "jdbc:mysql://localhost:3306/productos"; //me linkeo a la BD
 		try {
-			conexion= DriverManager.getConnection(jdbc, "root", "329442");
+			conexion= DriverManager.getConnection(jdbc, "root", "root");
 			System.out.println("Ingreso");
 			
 			
