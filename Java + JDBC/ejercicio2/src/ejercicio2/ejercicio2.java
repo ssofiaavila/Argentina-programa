@@ -22,7 +22,7 @@ public class ejercicio2 {
 		Connection conexion= null;
 		String jdbc= "jdbc:mysql://localhost:3306/Youtuber";
 		try {
-			conexion= DriverManager.getConnection(jdbc,"root","329442");
+			conexion= DriverManager.getConnection(jdbc,"root","root");
 			System.out.println("Conectado");			
 		}
 		catch (SQLException sql) {
