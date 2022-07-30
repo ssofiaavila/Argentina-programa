@@ -10,7 +10,8 @@ import { BannerComponent } from './components/banner/banner.component';
 import { AboutComponent } from './components/about/about.component';
 import { WorkComponent } from './components/work/work.component';
 import { EducationComponent } from './components/education/education.component';
-
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { SkillsComponent } from './components/skills/skills.component'; /* para el complemento de los skillks*/
 
 
 @NgModule({
@@ -22,12 +23,14 @@ import { EducationComponent } from './components/education/education.component';
     BannerComponent,
     AboutComponent,
     WorkComponent,
-    EducationComponent
+    EducationComponent,
+    SkillsComponent
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgCircleProgressModule.forRoot({}) /*para el complemento de los skills */
   ],
   providers: [],
   bootstrap: [AppComponent]
