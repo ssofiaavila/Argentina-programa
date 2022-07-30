@@ -32,7 +32,12 @@ div{
 #name{
    font-weight: bold;
    margin-top: 4%;
-
-
-
+   font-family: 'Kaisei Opti', serif;
+   font-weight: lighter;
+   font-size: 30px;
+}
+#about{
+    font-family: 'Kaisei Opti', serif;
+    font-weight: bold;
+    font-weight: lighter;
 }

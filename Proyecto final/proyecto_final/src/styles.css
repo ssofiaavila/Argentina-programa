@@ -2,3 +2,9 @@
 body{
     margin: 0px;
 }
+
+.font2{
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Kaisei Opti', serif;
+    font-family: 'Montserrat', sans-serif;
+}
