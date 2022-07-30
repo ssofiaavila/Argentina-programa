@@ -8,6 +8,8 @@ import { LogoComponent } from './components/logo/logo.component';
 import { SocialComponent } from './components/social/social.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { AboutComponent } from './components/about/about.component';
+import { WorkComponent } from './components/work/work.component';
+import { EducationComponent } from './components/education/education.component';
 
 
 
@@ -18,7 +20,9 @@ import { AboutComponent } from './components/about/about.component';
     LogoComponent,
     SocialComponent,
     BannerComponent,
-    AboutComponent
+    AboutComponent,
+    WorkComponent,
+    EducationComponent
 
   ],
   imports: [
