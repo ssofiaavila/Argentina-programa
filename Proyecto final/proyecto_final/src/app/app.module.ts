@@ -11,7 +11,10 @@ import { AboutComponent } from './components/about/about.component';
 import { WorkComponent } from './components/work/work.component';
 import { EducationComponent } from './components/education/education.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
-import { SkillsComponent } from './components/skills/skills.component'; /* para el complemento de los skillks*/
+import { SkillsComponent } from './components/skills/skills.component';
+import { MyproyectsComponent } from './components/myproyects/myproyects.component';
+import { FooterComponent } from './components/footer/footer.component';
+ /* para el complemento de los skillks*/
 
 
 @NgModule({
@@ -24,7 +27,10 @@ import { SkillsComponent } from './components/skills/skills.component'; /* para 
     AboutComponent,
     WorkComponent,
     EducationComponent,
-    SkillsComponent
+    SkillsComponent,
+    MyproyectsComponent,
+    FooterComponent,
+
 
   ],
   imports: [
