@@ -18,3 +18,8 @@ h3,h5{
 .img-proyecto{
     box-shadow: 10px 10px 30px grey ;
 }
+h1{
+    font-family: 'Kaisei Opti', serif;
+    font-weight: bold;
+    font-size:30px;
+}

@@ -32,9 +32,10 @@ div{
 #name{
    font-weight: bold;
    margin-top: 4%;
-   font-family: 'Kaisei Opti', serif;
-   font-weight: bold;
-   font-size: 30px;
+   font-family: 'Cedarville Cursive', cursive;
+   font-weight: normal;
+   font-size: 60px;
+   line-height: 60px;
 }
 #about{
     font-family: 'Kaisei Opti', serif;
