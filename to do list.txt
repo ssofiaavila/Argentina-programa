@@ -1,0 +1,8 @@
+HEADER
+	modificar altura
+	cambiar color logos
+	agregar links
+	alinear logo izquierdo con derecho
+	modificar imagen de header
+ABOUT
+	cambiar fuentes

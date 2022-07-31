@@ -1,11 +1,17 @@
 div{
-    background-color: #94B49F;
+    background-color: #E8E8E8;
+    height: -10px;
  
 }
 
 app-social{
-    float: right;
-    margin-top: auto;
-  
+   float: right;
+   margin-top:30px;
 
+}
+app-logo{
+    display: inline-block;
+}
+app-logo,app-social{
+    padding: 0px;
 }
