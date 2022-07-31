@@ -1,8 +1,10 @@
 .row{
     padding:50px;
+    background: rgb(232, 232, 232,0.6);
 }
 div{
-    background-color:#FCF8E8;
+    
+    
 }
 h3,h5{
     display:inline;

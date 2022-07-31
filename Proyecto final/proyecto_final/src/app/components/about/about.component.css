@@ -13,7 +13,7 @@ div{
         width: 15%;
         border-radius:100%;
         box-shadow: 3px 3px 3px #94B49F;
-        left:5%;
+        left:2%;
         top: 290px;
     }
 }
@@ -23,7 +23,7 @@ div{
         width: 30%;
         border-radius:100%;
         box-shadow: 3px 3px 3px #94B49F;
-        left:33%;
+        left:20%;
         top: 630px;
     }
 }
@@ -33,14 +33,23 @@ div{
    font-weight: bold;
    margin-top: 4%;
    font-family: 'Kaisei Opti', serif;
-   font-weight: lighter;
+   font-weight: bold;
    font-size: 30px;
 }
 #about{
     font-family: 'Kaisei Opti', serif;
     font-weight: bold;
+    margin-top: 10px;
     
 }
 p{
     font-family:montserrat;
+    font-size:15px;
+   height:auto;   
+}
+.descripcion{
+    width:50%;
+    font-size: 15px;
+    padding-left:10px;
+    margin-left:300px;
 }
