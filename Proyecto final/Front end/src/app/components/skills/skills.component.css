@@ -1,0 +1,19 @@
+.row{
+    background-color:#F4F4F2;
+    padding:50px;
+    background:rgb(187, 191, 202,0.6)
+ 
+    
+    
+}
+h1{
+    font-size:30px;
+    font-family: montserrat;
+    font-weight: bold;
+    text-align: center;
+}
+div{
+    display: inline-block;
+    
+   
+}

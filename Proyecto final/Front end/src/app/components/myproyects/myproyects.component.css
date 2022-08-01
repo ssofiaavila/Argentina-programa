@@ -1,0 +1,30 @@
+.row{
+    padding:20px;
+    background: rgb(244, 244, 242,0.6);
+}
+div{
+    
+}
+h3,h5{
+    display:inline;
+    font-family: 'Kaisei Opti';
+    font-size: 20PX;
+}
+.contenedor{
+    width:auto;
+}
+.parte1,parte2{
+    display:inline-block;
+    text-align:justify;
+}
+.img-proyecto{
+    box-shadow: 10px 10px 30px white ;
+    border-radius: 5%;
+}
+h1{
+    font-family: montserrat;
+    font-weight: bold;
+    font-size:30px;
+    text-align: center;
+    
+}
