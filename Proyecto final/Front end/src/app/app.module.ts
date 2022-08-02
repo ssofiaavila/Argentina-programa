@@ -14,6 +14,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { MyproyectsComponent } from './components/myproyects/myproyects.component';
 import { FooterComponent } from './components/footer/footer.component';
  /* para el complemento de los skillks*/
+ import {HttpClientModule} from '@Angular/common/http'
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgCircleProgressModule.forRoot({}) /*para el complemento de los skills */
+    NgCircleProgressModule.forRoot({}), /*para el complemento de los skills */
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
