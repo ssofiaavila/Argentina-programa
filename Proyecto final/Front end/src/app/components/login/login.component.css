@@ -10,4 +10,15 @@
     .h-custom-2 {
     height: 100%;
     }
-    }
+}
+.btn-info {
+    --bs-btn-bg:#BBBFCA;
+    --bs-btn-border-color:#BBBFCA;
+}
+
+.link-info {
+    color: black !important;
+}
+ .row{
+    font-family: montserrat;
+ }
