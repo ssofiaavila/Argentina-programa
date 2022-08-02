@@ -4,6 +4,7 @@
 div{
     background-color:#E8E8E8;
     text-align: center;
+    width: -webkit-fill-available;
 }
 
 /* estilo de mi foto de perfil */
@@ -34,14 +35,14 @@ div{
    margin-top: 4%;
    font-family: 'Cedarville Cursive', cursive;
    font-weight: normal;
-   font-size: 60px;
+   font-size: 50px;
    line-height: 60px;
 }
 #about{
     font-family: 'Kaisei Opti', serif;
     font-weight: bold;
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 20px;
     
 }
 p{
