@@ -15,6 +15,8 @@ import { MyproyectsComponent } from './components/myproyects/myproyects.componen
 import { FooterComponent } from './components/footer/footer.component';
  /* para el complemento de los skillks*/
  import {HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
  
 
 
@@ -30,6 +32,8 @@ import { FooterComponent } from './components/footer/footer.component';
     SkillsComponent,
     MyproyectsComponent,
     FooterComponent,
+    HomeComponent,
+    LoginComponent,
 
 
   ],
