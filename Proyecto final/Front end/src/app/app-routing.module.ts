@@ -5,7 +5,7 @@ import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent}, /* acá indico a qué componente me quiero direccionar a partir de que ahora implemento los botones*/
-  {path:'', component: LoginComponent},
+  {path:'login', component: LoginComponent}
 ];
 
 @NgModule({
