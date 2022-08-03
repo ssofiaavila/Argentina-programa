@@ -12,15 +12,14 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { SkillsComponent } from './components/skills/skills.component';
 import { MyproyectsComponent } from './components/myproyects/myproyects.component';
 import { FooterComponent } from './components/footer/footer.component';
- /* para el complemento de los skillks*/
+ /* para el complemento de los skills*/
  import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
- import {ExperienciaComponent} from './experiencia/experiencia.component';
-
+import {ExperienciaComponent} from './components/experiencia/experiencia.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +28,13 @@ import { interceptorProvider } from './service/interceptor-service';
     LogoComponent,
     BannerComponent,
     AboutComponent,
-    ExperienciaComponent,
     EducationComponent,
     SkillsComponent,
     MyproyectsComponent,
     FooterComponent,
     HomeComponent,
     LoginComponent, 
+    ExperienciaComponent,
     
 
 
