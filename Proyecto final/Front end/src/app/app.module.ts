@@ -7,7 +7,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { AboutComponent } from './components/about/about.component';
-import { WorkComponent } from './components/work/work.component';
 import { EducationComponent } from './components/education/education.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { SkillsComponent } from './components/skills/skills.component';
@@ -20,7 +19,7 @@ import { LoginComponent } from './components/login/login.component';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
- 
+ import {ExperienciaComponent} from './experiencia/experiencia.component';
 
 
 @NgModule({
@@ -30,7 +29,7 @@ import { interceptorProvider } from './service/interceptor-service';
     LogoComponent,
     BannerComponent,
     AboutComponent,
-    WorkComponent,
+    ExperienciaComponent,
     EducationComponent,
     SkillsComponent,
     MyproyectsComponent,
