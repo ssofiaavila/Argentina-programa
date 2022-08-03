@@ -33,7 +33,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/auth")
 @CrossOrigin
 public class AuthController {
-    @Autowired
+        @Autowired
     PasswordEncoder passwordEncoder;
     @Autowired
     AuthenticationManager authenticationManager;
@@ -87,7 +87,6 @@ public class AuthController {
         
         return new ResponseEntity(jwtDto, HttpStatus.OK);
     }
-    
     
     
 }
