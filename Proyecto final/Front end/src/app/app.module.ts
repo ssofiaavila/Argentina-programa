@@ -19,7 +19,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
+import { interceptorProvider } from './service/interceptor-service';
  
 
 
@@ -49,7 +49,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     FormsModule
   ],
   providers: [
-    
+    interceptorProvider
   ],
   bootstrap: [AppComponent]
 })
