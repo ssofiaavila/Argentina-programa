@@ -11,6 +11,6 @@ public interface IPersonaService {
     //Eliminar usuario hallado mediante ID
     public void deletePersona(Long id);
     //Buscar persona por ID
-    public Persona searchPersona(Long id);
+    public Persona findPersona(Long id);
     
 }

@@ -1,6 +1,7 @@
 
 package com.sofiaavila.avila.security;
 
+
 import com.sofiaavila.avila.security.Service.UserDetailImpl;
 import com.sofiaavila.avila.security.jwt.JwtEntryPoint;
 import com.sofiaavila.avila.security.jwt.JwtTokenFilter;
@@ -20,14 +21,16 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled= true)
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class MainSecurity extends WebSecurityConfigurerAdapter{
     @Autowired
-    UserDetailImpl userDetail;
+    UserDetailImpl userDetailsServicesImpl;
+    
     @Autowired
     JwtEntryPoint jwtEntryPoint;
+    
     @Bean
-    public JwtTokenFilter jwtToeknFilter(){
+    public JwtTokenFilter jwtTokenFilter(){
         return new JwtTokenFilter();
     }
     
@@ -39,31 +42,34 @@ public class MainSecurity extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()
-                .authorizeRequests().antMatchers("/auth/**").permitAll()
+                .authorizeRequests()
+                .antMatchers("**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-    
-    http.addFilterBefore(jwtToeknFilter(), UsernamePasswordAuthenticationFilter.class);
-    
+        http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);           
     }
 
     @Override
     protected AuthenticationManager authenticationManager() throws Exception {
-        return super.authenticationManagerBean();
+        return super.authenticationManager();
     }
+    
     @Bean
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        return super.authenticationManagerBean();
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetail).passwordEncoder(passwordEncoder());
+       auth.userDetailsService(userDetailsServicesImpl).passwordEncoder(passwordEncoder());
     }
+    
+    
+    
     
     
 }

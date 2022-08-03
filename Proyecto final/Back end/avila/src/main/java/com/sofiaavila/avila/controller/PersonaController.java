@@ -4,8 +4,8 @@ package com.sofiaavila.avila.controller;
 import com.sofiaavila.avila.Interface.IPersonaService;
 import com.sofiaavila.avila.entity.Persona;
 import java.util.List;
-import lombok.experimental.var;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +25,12 @@ public class PersonaController {
     public List<Persona> getPersona(){
         return ipersonaService.getPersona();
     }
+
+    /**
+     *
+     * @param persona
+     * @return
+     */
     
     @PostMapping("/personas/crear")
     public String createPersona(@RequestBody Persona persona){
@@ -42,7 +48,7 @@ public class PersonaController {
     public Persona editPersona(@PathVariable Long id, @RequestParam("nombre")String nuevoNombre, 
             @RequestParam("apellido")String nuevoApellido,
             @RequestParam("img")String nuevoImg){
-        Persona persona= ipersonaService.searchPersona(id);
+        Persona persona= ipersonaService.findPersona(id);
         
         persona.setNombre(nuevoNombre);
         persona.setApellido(nuevoApellido);
@@ -54,7 +60,7 @@ public class PersonaController {
     @GetMapping("/personas/traer/perfil")
     public Persona findPersona(){
         
-        return ipersonaService.searchPersona((long)6);
+        return ipersonaService.findPersona((long)6);
     }
     
     

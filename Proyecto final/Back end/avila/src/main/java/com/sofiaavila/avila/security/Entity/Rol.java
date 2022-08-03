@@ -13,23 +13,22 @@ import javax.persistence.Id;
 @Entity
 public class Rol {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @NotNull
     @Enumerated(EnumType.STRING)
     private RolNombre rolNombre;
     
-     //constructor
-    public Rol(){
-        
+    //Constructor
+    public Rol() {
     }
-    
-    public Rol(int id, RolNombre rolNombre) {
-        this.id = id;
+
+    public Rol(RolNombre rolNombre) {
         this.rolNombre = rolNombre;
     }
     
-    //assets
+    //Getter y Setter
+
     public int getId() {
         return id;
     }

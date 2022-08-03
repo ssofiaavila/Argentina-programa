@@ -3,17 +3,19 @@ package com.sofiaavila.avila.security.DTO;
 
 
 
-import javax.validation.constraints.NotNull;
+import com.sun.istack.NotNull;
 
-
+/**
+ *
+ * @author Usuario
+ */
 public class LoginUsuario {
     @NotNull
     private String nombreUsuario;
     @NotNull
     private String password;
     
-    
-    //assets
+    //Getter & Setter
 
     public String getNombreUsuario() {
         return nombreUsuario;
