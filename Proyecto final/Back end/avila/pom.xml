@@ -32,6 +32,13 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+         <!-- DEPENDENCIA DE STRING UTILS -->
+        <dependency>
+            <groupId> org.apache.commons </groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version> 3.9 </version>
+        </dependency> 
+        
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
