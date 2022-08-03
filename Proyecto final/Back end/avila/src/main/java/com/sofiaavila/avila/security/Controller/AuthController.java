@@ -12,6 +12,7 @@ import com.sofiaavila.avila.security.Service.UsuarioService;
 import com.sofiaavila.avila.security.jwt.JwtProvider;
 import java.util.HashSet;
 import java.util.Set;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -51,7 +52,7 @@ public class AuthController {
     @PostMapping("/nuevo")    
     public ResponseEntity<?> nuevo(@Valid @RequestBody NuevoUsuario nuevoUsuario, BindingResult bindingResult){
         if (bindingResult.hasErrors()){
-            return new ResponseEntity(new Mensaje("Campos mal puestos o email inválido"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("Campos mal puestos o email inv?lido"), HttpStatus.BAD_REQUEST);
         }
         if (usuarioService.existsByNombreUsuario(nuevoUsuario.getNombreUsuario())){
             return new ResponseEntity(new Mensaje("Nombre de usuario ya registrado"), HttpStatus.BAD_REQUEST);
