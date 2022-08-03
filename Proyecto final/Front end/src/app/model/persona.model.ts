@@ -1,8 +1,8 @@
 export class persona{
-    id:number | undefined;
-    nombre:String | undefined;
-    apellido:String | undefined;
-    img:String | undefined;
+    id?:number;
+    nombre:String;
+    apellido:String;
+    img:String;
 
     constructor (nombre: String,apellido: String,img: String){ 
         this.nombre = nombre;
