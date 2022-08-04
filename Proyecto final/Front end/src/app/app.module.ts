@@ -21,6 +21,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
 import {ExperienciaComponent} from './components/experiencia/experiencia.component';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
     FooterComponent,
     HomeComponent,
     LoginComponent, 
-    ExperienciaComponent, NewExperienciaComponent,
+    ExperienciaComponent, NewExperienciaComponent, EditExperienciaComponent,
     
 
 
