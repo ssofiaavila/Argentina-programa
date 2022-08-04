@@ -20,6 +20,7 @@ import { LoginComponent } from './components/login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
 import {ExperienciaComponent} from './components/experiencia/experiencia.component';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import {ExperienciaComponent} from './components/experiencia/experiencia.compone
     FooterComponent,
     HomeComponent,
     LoginComponent, 
-    ExperienciaComponent,
+    ExperienciaComponent, NewExperienciaComponent,
     
 
 

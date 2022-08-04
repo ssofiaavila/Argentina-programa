@@ -1,28 +1,38 @@
 <div class="container-fluid"> 
     <div class="row">
         <h1> EXPERIENCIA LABORAL </h1>
-        <div class="col-lg-1"> 
 
-            
-        </div>
-        <div class="col-lg-11"> 
-            <ul>
-                <li>
-                    <h3 id="titulo"> Profesora de inglés británico  </h3> |  <h5> 2018- actualidad </h5>
-                    <p> Enseñanza en clases individuales y grupales, preparación para exámenes y apoyo escolar </p>
-                 </li>
-                <li>
-                     <h3 id="titulo"> Gestión de redes sociales </h3> | <h5> 2021-2021 </h5>
-                     <p> GYG tu lugar <br> Creación de contenido </p>
-                </li>
-                <li> 
-                    <h3 id="titulo">Servicio de atención al cliente </h3> |    <h5> 2018-2020 </h5>
-                    <p> Polirrubro "Matías" <br> Atención a clientes </p>
-                </li>
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-primary" routerLink="/nuevaExperiencia" *ngIf="isLogged"> 
+                Nueva experiencia
+            </button>
 
-            </ul>
-            
+          
+
         </div>
+        
+        <div class="col-lg 1"> </div>
+        <div class="col-lg-11">
+            <table class="table">
+                <body>
+                    <tr *ngFor="let Experiencia of expe"> 
+                        <td> {{Experiencia.nombreE}} </td>
+                        <td> {{Experiencia.descripcionE}} </td>
+                        <td> Editar </td>
+                        <td> Borrar </td>
+                    </tr>
+    
+    
+                </body>
+    
+    
+            </table>
+
+
+
+        </div>
+        
+
 
     </div>
 
