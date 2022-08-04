@@ -33,7 +33,7 @@ public class CEducacion {
         return new ResponseEntity(list, HttpStatus.OK);
     }
 
-    @DeleteMapping("/delete/{id")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id) {
         if (!sEducacion.existsById(id)) {
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);

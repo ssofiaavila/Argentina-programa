@@ -1,33 +1,41 @@
 <div class="container-fluid"> 
     <div class="row">
-        <h1> EDUCACIÓN </h1>
-        <div class="col-lg-1"> 
+        <h1> EDUCACIÓN </h1>        
 
-            
-        </div>
-        <div class="col-lg-11"> 
-            <ul>
-                <li>
-                    <h3 id="titulo"> Licenciatura en sistemas  </h3> | <h5> 2020- actualidad </h5>
-                    <p> Universidad Nacional de La Plata <br> Cantidad de materias aprobadas: 13 de 36</p>
-                   
-                 </li>
-                <li>
-                     <h3 id="titulo" > Analista programador universitario </h3> | <h5> 2020- actualidad </h5>
-                     <p> Universidad Nacional de La Plata <br> Cantidad de materias aprobadas: 13 de 23</p>
-                </li>
-                <li> 
-                    <h3 id="titulo">Bachiller en economía y administración </h3>|   <h5> 2013- 2019 </h5>
-                    <p> Instituto San Alfonso, Quilmes <br> Titulación: 8.73</p>
-                </li>
-                <li>
-                    <h3 id="titulo"> Capacitación superior en inglés  </h3>|  <h5> 2009- 2019 </h5>
-                    <p> Instituto Argentino de Cultura Inglesa <br> Titulación: 8.3 </p>
-                 </li>
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-primary" routerLink="/nuevaEducacion" *ngIf="isLogged"> 
+                Agregar educación
+            </button>
 
-            </ul>
-            
+          
+
         </div>
+        
+        <div class="col-lg 1"> </div>
+        <div class="col-lg-11">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Educacion of educacion"> 
+                        <td> 
+                            <h2> {{Educacion.nombreE}} </h2> 
+                        </td>
+                        <td> {{Educacion.descripcionE}} </td>
+                        <td *ngIf="isLogged"> 
+                            <button class="btn btn-primary" routerLink="/editeducacion/{{Educacion.id}}"> 
+                            <i class="bi bi-pencil-fill"> </i>  Editar </button>  
+                        </td>
+                        
+                        <td *ngIf="isLogged"> 
+                            <button class="btn btn-primary" (click)= "delete(Educacion.id)"> 
+                            <i class="bi bi-trash"> </i>  Borrar </button>  
+                        </td>
+                    </tr> 
+    
+                </tbody>   
+    
+            </table>
+        </div>    
+
 
     </div>
 
