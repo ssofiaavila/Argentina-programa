@@ -4,6 +4,7 @@ package com.sofiaavila.avila.DTO;
 import javax.validation.constraints.NotBlank;
 
 
+
 public class DTOEducacion {
     @NotBlank
     private String nombreE;

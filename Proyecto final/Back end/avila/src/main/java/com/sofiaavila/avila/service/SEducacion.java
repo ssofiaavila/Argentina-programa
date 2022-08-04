@@ -10,34 +10,37 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-@Transactional
+@Transactional 
 public class SEducacion {
     @Autowired
-    REducacion rEducacion;
-    
-    public List<Educacion> list(){
-        return rEducacion.findAll();
-    }
-    
-    public Optional<Educacion> getOne(int id){
-        return rEducacion.findById(id);        
-    }
-    public Optional<Educacion> getByNombreE(String nombreE){
-        return rEducacion.findByNombreE(nombreE);
-    }
-    public void save(Educacion educacion){
-        rEducacion.save(educacion);
-    }
-    public void delete(int id){
-        rEducacion.deleteById(id);
-    }
-    
-    public boolean existsById(int id){
-        return rEducacion.existsById(id);
-    }
-    
-    public boolean existsByNombreE(String nombreE){
-        return rEducacion.existsByNombreE(nombreE);
-    }
-    
+     REducacion rExperiencia;
+     
+     public List<Educacion> list(){
+         return rExperiencia.findAll();
+     }
+     
+     public Optional<Educacion> getOne(int id){
+         return rExperiencia.findById(id);
+     }
+     
+     public Optional<Educacion> getByNombreE(String nombreE){
+         return rExperiencia.findByNombreE(nombreE);
+     }
+     
+     public void save(Educacion expe){
+         rExperiencia.save(expe);
+     }
+     
+     public void delete(int id){
+         rExperiencia.deleteById(id);
+     }
+     
+     public boolean existsById(int id){
+         return rExperiencia.existsById(id);
+     }
+     
+     public boolean existsByNombreE(String nombreE){
+         return rExperiencia.existsByNombreE(nombreE);
+     }
+
 }
