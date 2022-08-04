@@ -6,6 +6,7 @@ import com.sofiaavila.avila.entity.Experiencia;
 import com.sofiaavila.avila.security.Controller.Mensaje;
 import com.sofiaavila.avila.service.SExperiencia;
 import java.util.List;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("experiencia")
+@RequestMapping("/experiencia")
 @CrossOrigin(origins= "http://localhost:4200")
 public class CExperiencia {
     @Autowired
@@ -31,14 +32,16 @@ public class CExperiencia {
         return new ResponseEntity(list,HttpStatus.OK);
     }
     
-    @PostMapping("/crear")
-    public ResponseEntity<?> create(@RequestBody DTOExperiencia dtoexp){
-        if (dtoexp.getNombreE().isBlank())
+    @PostMapping("/create")
+    public ResponseEntity<?> create(@RequestBody DTOExperiencia dtoexp){      
+        if(StringUtils.isBlank(dtoexp.getNombreE()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-        if (experiencia.existsByNombre(dtoexp.getNombreE()))
-            return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-        Experiencia exp= new Experiencia(dtoexp.getNombreE(),dtoexp.getDescripcionE());
+        if(experiencia.existsByNombre(dtoexp.getNombreE()))
+            return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
+        
+        Experiencia exp = new Experiencia(dtoexp.getNombreE(), dtoexp.getDescripcionE());
         experiencia.save(exp);
+        
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
     }
     @PutMapping("/update/{id}")
