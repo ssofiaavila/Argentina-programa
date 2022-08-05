@@ -14,6 +14,7 @@
 .btn-info {
     --bs-btn-bg:#BBBFCA;
     --bs-btn-border-color:#BBBFCA;
+    --bs-btn-hover-bg: #BBBFCA;
 }
 
 .link-info {
@@ -27,3 +28,16 @@
  form{
      style: "width: 23rem";
  }
+
+ .btn-check:checked + .btn, .btn-check:active + .btn, .btn:active, .btn.active, .btn.show {
+    color: black;
+    color: #000000;
+    background-color: #bbbfca;
+    border-color: #bbbfca;
+    border-top-color: rgb(187, 191, 202);
+    border-right-color: rgb(187, 191, 202);
+    border-bottom-color: rgb(187, 191, 202);
+    border-left-color: rgb(187, 191, 202);
+}
+
+    

@@ -1,0 +1,50 @@
+.row{
+    padding:50px;
+    background: rgb(187, 191, 202,0.6);
+    margin:0px;
+   
+    
+}
+
+h3,h5{
+    display:inline;
+  
+}
+h1{
+    font-size:30px;
+    font-family:MONTSERRAT;
+    font-weight: bold;
+    text-align: center;
+}
+#titulo{
+    font-family: 'Kaisei Opti', serif;  
+    
+    font-size: 20px;
+    color:black;
+}
+h5{
+    color:black;
+    font-family:'Kaisei Opti', serif;
+   
+    font-size: 15px;
+}
+ul {
+    list-style-type: circle;
+  }
+
+  .btn-primary {
+    --bs-btn-color: #495464;
+    --bs-btn-bg: #bbbfca;
+    --bs-btn-border-color: #495464;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #bbbfca;
+    --bs-btn-hover-border-color: #bbbfca;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #bbbfca;
+    --bs-btn-active-border-color: #bbbfca;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #bbbfca;
+    --bs-btn-disabled-border-color: #bbbfca;
+}

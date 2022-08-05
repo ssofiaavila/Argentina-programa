@@ -10,13 +10,19 @@ public class DTOEducacion {
     private String nombreE;
     @NotBlank
     private String descripcionE;
+    @NotBlank
+    private int inicioE;
+    @NotBlank
+    private int finE;
 
     public DTOEducacion() {
     }
 
-    public DTOEducacion(String nombreE, String descripcionE) {
+    public DTOEducacion(String nombreE, String descripcionE, int inicioE, int finE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.inicioE=inicioE;
+        this.finE= finE;
     }
 
     public String getNombreE() {
@@ -34,6 +40,23 @@ public class DTOEducacion {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
+
+    public int getInicioE() {
+        return inicioE;
+    }
+
+    public void setInicioE(int inicioE) {
+        this.inicioE = inicioE;
+    }
+
+    public int getFinE() {
+        return finE;
+    }
+
+    public void setFinE(int finE) {
+        this.finE = finE;
+    }
+    
     
     
 }

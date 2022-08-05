@@ -56,12 +56,12 @@ public class CEducacion {
         if(StringUtils.isBlank(dtoexp.getNombreE()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         if(sEducacion.existsByNombreE(dtoexp.getNombreE()))
-            return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("Esa educación existe"), HttpStatus.BAD_REQUEST);
         
-        Educacion experiencia = new Educacion(dtoexp.getNombreE(), dtoexp.getDescripcionE());
+        Educacion experiencia = new Educacion(dtoexp.getNombreE(), dtoexp.getDescripcionE(), dtoexp.getInicioE(), dtoexp.getFinE());
         sEducacion.save(experiencia);
         
-        return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Educación agregada"), HttpStatus.OK);
     }
     
     @PutMapping("/update/{id}")
@@ -71,7 +71,7 @@ public class CEducacion {
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
         //Compara nombre de experiencias
         if(sEducacion.existsByNombreE(dtoexp.getNombreE()) && sEducacion.getByNombreE(dtoexp.getNombreE()).get().getId() != id)
-            return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("Esa educación ya existe"), HttpStatus.BAD_REQUEST);
         //No puede estar vacio
         if(StringUtils.isBlank(dtoexp.getNombreE()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
@@ -81,7 +81,7 @@ public class CEducacion {
         educacion.setDescripcionE((dtoexp.getDescripcionE()));
         
         sEducacion.save(educacion);
-        return new ResponseEntity(new Mensaje("Experiencia actualizada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Educación actualizada"), HttpStatus.OK);
              
     }
 }
