@@ -9,15 +9,21 @@ public class DTOExperiencia {
     private String nombreE;
     @NotBlank
     private String descripcionE;
+    @NotBlank
+    private int inicioE;
+    @NotBlank
+    private int finE;
     
     //Constructores
 
     public DTOExperiencia() {
     }
 
-    public DTOExperiencia(String nombreE, String descripcionE) {
+    public DTOExperiencia(String nombreE, String descripcionE, int inicioE, int finE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.inicioE= inicioE;
+        this.finE= inicioE;
     }
     //Getters & Setters
 
@@ -36,5 +42,23 @@ public class DTOExperiencia {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
+
+    public int getInicioE() {
+        return inicioE;
+    }
+
+    public void setInicioE(int inicioE) {
+        this.inicioE = inicioE;
+    }
+
+    public int getFinE() {
+        return finE;
+    }
+
+    public void setFinE(int finE) {
+        this.finE = finE;
+    }
+    
+    
     
 }
