@@ -2,13 +2,13 @@ export class Educacion {
     id: number;
     nombreE: string;
     descripcionE: string;
-    inicioE: number;
-    finE: number
+    inicio: number;
+    fin: number
 
-    constructor(nombreE: string, descripcionE: string, inicioE: number, finE: number) {
+    constructor(nombreE: string, descripcionE: string, inicio: number, fin: number) {
         this.nombreE = nombreE;
         this.descripcionE= descripcionE;
-        this.inicioE = inicioE;
-        this.finE = finE;
+        this.inicio = inicio;
+        this.fin = fin;
     }
 }
