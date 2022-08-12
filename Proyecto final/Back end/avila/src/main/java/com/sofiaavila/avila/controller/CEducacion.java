@@ -55,8 +55,7 @@ public class CEducacion {
     public ResponseEntity<?> create(@RequestBody DTOEducacion dtoexp){      
         if(StringUtils.isBlank(dtoexp.getNombreE()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-        if(sEducacion.existsByNombreE(dtoexp.getNombreE()))
-            return new ResponseEntity(new Mensaje("Esa educación existe"), HttpStatus.BAD_REQUEST);
+        
         
         Educacion experiencia = new Educacion(dtoexp.getNombreE(), dtoexp.getDescripcionE(), dtoexp.getInicioE(), dtoexp.getFinE());
         sEducacion.save(experiencia);

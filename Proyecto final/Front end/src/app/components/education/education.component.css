@@ -49,3 +49,11 @@ ul {
     --bs-btn-disabled-bg: #bbbfca;
     --bs-btn-disabled-border-color: #bbbfca;
 }
+.table[_ngcontent-lvc-c55] > [_ngcontent-lvc-c55]:not(caption) > *[_ngcontent-lvc-c55] > *[_ngcontent-lvc-c55] {
+    font-size: 20px;
+}
+
+.table > :not(caption) > * > * {
+    
+    font-size: 20px;
+}

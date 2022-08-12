@@ -3,7 +3,7 @@ export class Educacion {
     nombreE: string;
     descripcionE: string;
     inicio: number;
-    fin: number
+    fin: number;
 
     constructor(nombreE: string, descripcionE: string, inicio: number, fin: number) {
         this.nombreE = nombreE;
