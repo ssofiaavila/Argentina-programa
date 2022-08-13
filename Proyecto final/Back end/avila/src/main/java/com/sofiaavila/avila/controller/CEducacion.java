@@ -57,7 +57,7 @@ public class CEducacion {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         
         
-        Educacion experiencia = new Educacion(dtoexp.getNombreE(), dtoexp.getDescripcionE(), dtoexp.getInicioE(), dtoexp.getFinE());
+        Educacion experiencia = new Educacion(dtoexp.getNombreE(), dtoexp.getDescripcionE(), dtoexp.getInicio(), dtoexp.getFin());
         sEducacion.save(experiencia);
         
         return new ResponseEntity(new Mensaje("Educación agregada"), HttpStatus.OK);

@@ -13,17 +13,17 @@ public class Educacion {
     private int id;
     private String nombreE;
     private String descripcionE;
-    private int inicioE;
-    private int finE;
+    private int inicio;
+    private int fin;
 
     public Educacion() {
     }
 
-    public Educacion(String nombreE, String descripcionE, int inicioE, int finE) {
+    public Educacion(String nombreE, String descripcionE, int inicio, int fin) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
-        this.inicioE = inicioE;
-        this.finE= finE;
+        this.inicio = inicio;
+        this.fin= fin;
     }
 
     public int getId() {
@@ -51,19 +51,19 @@ public class Educacion {
     }
 
     public int getInicio() {
-        return inicioE;
+        return inicio;
     }
 
     public void setInicio(int inicio) {
-        this.inicioE = inicio;
+        this.inicio = inicio;
     }
 
     public int getFin() {
-        return finE;
+        return fin;
     }
 
     public void setFin(int fin) {
-        this.finE = fin;
+        this.fin = fin;
     }
     
     

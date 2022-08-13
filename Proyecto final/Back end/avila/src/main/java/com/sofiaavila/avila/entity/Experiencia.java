@@ -16,9 +16,7 @@ public class Experiencia {
     private int inicioE;
     private int finE;
     
-    //constructors
-    public Experiencia(){
-        
+    public Experiencia(){        
     }
     
     public Experiencia(String nombreE, String descripcionE, int inicioE, int finE) {
@@ -28,7 +26,6 @@ public class Experiencia {
         this.finE=finE;
     }
     
-    //assets
     public int getId() {
         return id;
     }
