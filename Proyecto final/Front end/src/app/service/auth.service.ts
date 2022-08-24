@@ -10,7 +10,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 })
 export class AuthService {
 
-  authURL= 'https://backendavila.herokuapp.com/auth/'
+  authURL= 'http://backendavila.herokuapp.com/auth/'
 
 
   constructor(private httpClient: HttpClient) { }
