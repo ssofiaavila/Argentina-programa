@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { Experiencia } from '../model/experiencia';
@@ -8,7 +8,7 @@ import { Experiencia } from '../model/experiencia';
 })
 export class SExperienciaService {
   expURL= 'https://backendavila.herokuapp.com/experiencia/';
-
+  
 
   constructor(private httpClient: HttpClient) { }
 
